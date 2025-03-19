@@ -1,7 +1,6 @@
 import streamlit as st
 
-st.image("C:/Users/LENOVO/OneDrive/Desktop/PYTHON_TUTORIAL/streamlit/scifortechnologies_logo.png",
-         use_cotainer_width=True)
+st.image("scifortechnologies_logo.png",use_cotainer_width=True)
 
 st.markdown("""<h1 style='text-align: center; font-size: 50px;'>Meta Scifor Mega Hiring</h1>""",
             unsafe_allow_html=True)
