@@ -1,5 +1,6 @@
 import streamlit as st
 
+st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiX7NRuPjDQ7-Mb70rlGzlAUU_vF7w3E2tNw&s", use_container_width=True)
 
 st.markdown("""<h1 style='text-align: center; font-size: 50px;'>Meta Scifor Mega Hiring</h1>""",
             unsafe_allow_html=True)
