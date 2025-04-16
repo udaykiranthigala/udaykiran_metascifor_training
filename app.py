@@ -7,11 +7,11 @@ from scraper import scrape_website
 st.set_page_config(page_title="Web Scraper", layout="wide")
 
 # Company logo on the top-left
-logo_url = "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"  # Replace with your logo URL
+logo_url = "https://metascifor.com/static/images/Meta%20Scifor%20Icon.png"
 st.markdown(
     f"""
     <div style="display: flex; align-items: center;">
-        <img src="{logo_url}" alt="Company Logo" style="width: 50px; height: 50px; margin-right: 10px;">
+        <img src="{logo_url}" alt="Meta Scifor Logo" style="width: 50px; height: 50px; margin-right: 10px;">
         <h1 style="margin: 0;">🔍 Universal Web Scraper & Report Generator</h1>
     </div>
     """,
@@ -35,6 +35,18 @@ if st.button("Start Scraping"):
             if not df.empty:
                 df.to_csv("report.csv", index=False)
                 st.success(f"✅ Scraping completed! {len(df)} pages scraped.")
+                # Blue-colored CSV download button
+                st.markdown(
+                    f"""
+                    <style>
+                    .stDownloadButton > button {{
+                        background-color: #007bff;
+                        color: white;
+                    }}
+                    </style>
+                    """,
+                    unsafe_allow_html=True,
+                )
                 st.download_button(
                     label="📄 Download CSV Report",
                     data=df.to_csv(index=False),
